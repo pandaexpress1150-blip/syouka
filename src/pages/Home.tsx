@@ -79,14 +79,14 @@ export const Home: React.FC = () => {
           style={{ opacity }}
           className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10"
         >
-          <span className="text-[10px] tracking-[0.4em] uppercase opacity-50">
+          <span className="text-xs tracking-[0.4em] uppercase opacity-50">
             {t('hero.scroll')}
           </span>
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           >
-            <ChevronDown className="w-4 h-4 opacity-50" />
+            <ChevronDown className="w-5 h-5 opacity-50" />
           </motion.div>
         </motion.div>
       </section>
@@ -96,13 +96,13 @@ export const Home: React.FC = () => {
         id="concept"
         className="min-h-[70vh] flex items-center justify-center text-center py-12 md:py-32"
       >
-        <div className="max-w-3xl space-y-8 md:space-y-12">
+        <div className="max-w-4xl space-y-10 md:space-y-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
-            className="text-xl md:text-3xl lg:text-5xl font-serif tracking-[0.2em] leading-relaxed whitespace-pre-wrap px-4"
+            className="text-2xl md:text-4xl lg:text-6xl font-serif tracking-[0.2em] leading-relaxed whitespace-pre-wrap px-4"
           >
             {t('concept.title')}
           </motion.h2>
@@ -112,7 +112,7 @@ export const Home: React.FC = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="space-y-4 md:space-y-6 text-xs md:text-base text-gray-400 tracking-wider leading-loose max-w-2xl mx-auto whitespace-pre-wrap px-4"
+            className="space-y-6 md:space-y-8 text-sm md:text-xl text-gray-400 tracking-wider leading-loose max-w-3xl mx-auto whitespace-pre-wrap px-4"
           >
             <p>{t('concept.description')}</p>
           </motion.div>
@@ -120,26 +120,26 @@ export const Home: React.FC = () => {
       </Section>
 
       {/* Works Section */}
-      <Section id="works" className="py-16 md:py-24">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-6">
+      <Section id="works" className="py-20 md:py-32">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24 gap-6">
           <div>
-            <h3 className="text-[10px] tracking-[0.4em] uppercase text-sakura mb-4">
+            <h3 className="text-xs md:text-sm tracking-[0.4em] uppercase text-sakura mb-6">
               {t('works.subtitle')}
             </h3>
-            <h2 className="text-2xl md:text-4xl font-serif tracking-widest">
+            <h2 className="text-3xl md:text-5xl font-serif tracking-widest">
               {t('works.title')}
             </h2>
           </div>
           <a
             href="#works"
-            className="group flex items-center gap-2 text-[10px] tracking-[0.3em] uppercase hover:text-sakura transition-all duration-300"
+            className="group flex items-center gap-2 text-xs md:text-sm tracking-[0.3em] uppercase hover:text-sakura transition-all duration-300"
           >
             {t('works.view_all')}{" "}
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16">
           {worksData.map((work, i) => (
             <motion.div
               key={i}
@@ -151,7 +151,7 @@ export const Home: React.FC = () => {
               className="group cursor-pointer"
               onClick={() => setSelectedWork(work)}
             >
-              <div className="relative overflow-hidden rounded-xl aspect-[4/3] mb-4 md:mb-6 transition-all duration-500 group-hover:shadow-[0_15px_40px_-10px_rgba(255,183,197,0.25)] group-hover:ring-1 group-hover:ring-white/10">
+              <div className="relative overflow-hidden rounded-xl aspect-[4/3] mb-6 md:mb-8 transition-all duration-500 group-hover:shadow-[0_15px_40px_-10px_rgba(255,183,197,0.25)] group-hover:ring-1 group-hover:ring-white/10">
                 <div className="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-colors duration-500 z-10" />
                 <img
                   src={work.img}
@@ -160,10 +160,10 @@ export const Home: React.FC = () => {
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <h4 className="text-lg md:text-xl font-serif tracking-wider mb-2">
+              <h4 className="text-xl md:text-2xl font-serif tracking-wider mb-3">
                 {work.title}
               </h4>
-              <p className="text-[10px] tracking-widest uppercase text-gray-500">
+              <p className="text-xs md:text-sm tracking-widest uppercase text-gray-500">
                 {work.category}
               </p>
             </motion.div>
@@ -174,25 +174,25 @@ export const Home: React.FC = () => {
       {/* Quick Contact Section */}
       <Section
         id="quick-contact"
-        className="py-24 md:py-32 text-center"
+        className="py-32 md:py-48 text-center"
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className="max-w-2xl mx-auto px-4"
+          className="max-w-3xl mx-auto px-4"
         >
-          <h2 className="text-xl md:text-4xl font-serif tracking-widest mb-8 whitespace-pre-wrap">
+          <h2 className="text-2xl md:text-5xl font-serif tracking-widest mb-12 whitespace-pre-wrap">
             {t('contact.title')}
           </h2>
           <button 
-            className="group relative inline-flex items-center justify-center px-8 py-4 font-serif tracking-widest text-sm overflow-hidden rounded-full bg-white text-navy hover:text-white hover:scale-110 hover:shadow-[0_0_20px_rgba(255,183,197,0.8)] transition-all duration-500"
+            className="group relative inline-flex items-center justify-center px-10 py-5 font-serif tracking-widest text-base overflow-hidden rounded-full bg-white text-navy hover:text-white hover:scale-110 hover:shadow-[0_0_20px_rgba(255,183,197,0.8)] transition-all duration-500"
             onClick={() => window.location.href = '/contact'}
           >
             <span className="absolute inset-0 w-full h-full bg-sakura -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out" />
-            <span className="relative flex items-center gap-2">
-              <Mail className="w-4 h-4" /> {t('contact.button')}
+            <span className="relative flex items-center gap-3">
+              <Mail className="w-5 h-5" /> {t('contact.button')}
             </span>
           </button>
         </motion.div>

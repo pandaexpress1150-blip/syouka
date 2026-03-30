@@ -18,14 +18,12 @@ export const Footer: React.FC = () => {
         <div>
           <h3 className="text-sm tracking-widest uppercase text-white mb-6">Contact</h3>
           <address className="not-italic text-sm text-gray-400 leading-relaxed tracking-wide space-y-2">
-            <p>〒150-0001</p>
-            <p>東京都渋谷区神宮前 1-2-3</p>
-            <p>昇華ビル 4F</p>
+            <p>{t('contact.address_value')}</p>
             <p className="pt-2">
-              <a href="tel:03-1234-5678" className="hover:text-sakura transition-all duration-300 inline-block">03-1234-5678</a>
+              <a href={`tel:${t('contact.phone_value').replace(/-/g, '')}`} className="hover:text-sakura transition-all duration-300 inline-block">{t('contact.phone_value')}</a>
             </p>
             <p>
-              <a href="mailto:hello@shouka.design" className="hover:text-sakura transition-all duration-300 inline-block">hello@shouka.design</a>
+              <a href={`mailto:${t('contact.email_value')}`} className="hover:text-sakura transition-all duration-300 inline-block">{t('contact.email_value')}</a>
             </p>
           </address>
         </div>

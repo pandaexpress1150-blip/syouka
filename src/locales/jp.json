@@ -79,9 +79,11 @@
     },
     "info": {
       "name_label": "社名",
-      "name_value": "昇華 （合同会社/株式会社）",
+      "name_value": "株式会社 昇華",
       "established_label": "設立",
-      "established_value": "2026年 3月",
+      "established_value": "2026年 4月",
+      "representative_label": "代表取締役",
+      "representative_value": "霜村 栄治",
       "business_label": "事業内容",
       "business_value": "Webサイト・Webアプリケーションの企画・制作、3Dクリエイティブ制作、Web3/ブロックチェーン関連開発、デジタルマーケティング支援"
     }
@@ -90,7 +92,10 @@
     "title": "新しいプロジェクトを、ここから始めましょう。",
     "subtitle": "Contact",
     "lead": "「こんなアイデアを形にしたい」「技術的に可能かどうか知りたい」「既存のサイトを劇的に改善したい」どんな小さなきっかけでも構いません。スタートアップならではの機動力で、あなたのビジョンを具現化するお手伝いをします。まずはカジュアルにお話ししましょう。",
-    "button": "Contact Us"
+    "button": "Contact Us",
+    "address_value": "〒231-0824 神奈川県横浜市中区三之谷14-14 テンコウビル201",
+    "phone_value": "090-8813-5055",
+    "email_value": "shouka@info.com"
   },
   "works": {
     "title": "実績",

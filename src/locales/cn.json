@@ -79,9 +79,11 @@
     },
     "info": {
       "name_label": "公司名称",
-      "name_value": "昇華设计代理机构",
+      "name_value": "株式会社 昇華",
       "established_label": "成立日期",
-      "established_value": "2026年 3月",
+      "established_value": "2026年 4月",
+      "representative_label": "法人代表",
+      "representative_value": "霜村 栄治",
       "business_label": "业务范围",
       "business_value": "Web 网站及应用规划制作、3D 创意制作、Web3/区块链相关开发、数字营销支援"
     }
@@ -90,7 +92,10 @@
     "title": "在这里开始您的新项目。",
     "subtitle": "Contact",
     "lead": "无论是想实现一个创意，还是咨询技术可行性，或者是彻底改进现有网站，我们都在这里为您提供支持。欢迎先进行轻松的交流。",
-    "button": "联系我们"
+    "button": "联系我们",
+    "address_value": "神奈川县横滨市中区三之谷14-14 Tenkou大厦201",
+    "phone_value": "090-8813-5055",
+    "email_value": "shouka@info.com"
   },
   "works": {
     "title": "案例展示",

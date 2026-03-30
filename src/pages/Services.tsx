@@ -27,22 +27,22 @@ export const Services: React.FC = () => {
 
   return (
     <div className="pt-32 pb-20">
-      <Section id="services-hero" className="text-center mb-20">
+      <Section id="services-hero" className="text-center mb-24 md:mb-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h3 className="text-[10px] tracking-[0.4em] uppercase text-sakura mb-4">
+          <h3 className="text-xs md:text-sm tracking-[0.4em] uppercase text-sakura mb-6">
             {t('services.subtitle')}
           </h3>
-          <h1 className="text-4xl md:text-6xl font-serif tracking-widest mb-12">
+          <h1 className="text-4xl md:text-7xl font-serif tracking-widest mb-16">
             {t('services.title')}
           </h1>
         </motion.div>
       </Section>
 
-      <div className="max-w-7xl mx-auto px-6 grid gap-24">
+      <div className="max-w-7xl mx-auto px-6 grid gap-32">
         {services.map((service, i) => (
           <Section key={service.key} id={service.key} className="relative">
             <motion.div
@@ -50,20 +50,20 @@ export const Services: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1 }}
-              className={`grid lg:grid-cols-2 gap-12 items-center`}
+              className={`grid lg:grid-cols-2 gap-16 items-center`}
             >
-              <div className={`p-8 md:p-12 rounded-3xl bg-gradient-to-br ${service.color} border border-white/10 relative overflow-hidden group ${i % 2 !== 0 ? 'lg:order-2' : ''}`}>
+              <div className={`p-10 md:p-16 rounded-[40px] bg-gradient-to-br ${service.color} border border-white/10 relative overflow-hidden group ${i % 2 !== 0 ? 'lg:order-2' : ''}`}>
                 <div className="absolute inset-0 bg-white/[0.02] group-hover:bg-transparent transition-colors duration-500" />
-                <div className="relative z-10 w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-white/5 flex items-center justify-center text-sakura mb-6 md:mb-8 group-hover:scale-110 transition-transform duration-500">
-                  {service.icon}
+                <div className="relative z-10 w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white/5 flex items-center justify-center text-sakura mb-8 md:mb-12 group-hover:scale-110 transition-transform duration-500">
+                  {React.cloneElement(service.icon as React.ReactElement, { className: "w-10 h-10" })}
                 </div>
-                <h2 className="text-xl md:text-2xl lg:text-3xl font-serif tracking-widest mb-4 md:mb-6">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif tracking-widest mb-6 md:mb-10">
                   {t(`services.${service.key}.title`)}
                 </h2>
-                <h3 className="text-sakura text-xs md:text-sm tracking-[0.2em] mb-6 md:mb-8 font-medium">
+                <h3 className="text-sakura text-sm md:text-base tracking-[0.2em] mb-8 md:mb-12 font-medium">
                   {t(`services.${service.key}.concept`)}
                 </h3>
-                <p className="text-sm md:text-base text-gray-400 leading-loose tracking-wide whitespace-pre-wrap">
+                <p className="text-base md:text-xl text-gray-400 leading-loose tracking-wide whitespace-pre-wrap">
                   {t(`services.${service.key}.description`)}
                 </p>
               </div>

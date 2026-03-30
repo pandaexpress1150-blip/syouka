@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-serif: "Syne", "Kaisei Tokumin", serif;
+  --font-serif: "Cinzel", "Yuji Mai", "Zhi Mang Xing", serif;
   --font-sans: "Inter", sans-serif;
   --color-navy: #0a0f1a;
   --color-sakura: #ffb7c5;
@@ -11,6 +11,7 @@
 @layer base {
   html {
     scroll-padding-top: 100px;
+    font-size: 110%;
   }
   body {
     @apply bg-navy text-white font-serif antialiased selection:bg-sakura selection:text-navy;

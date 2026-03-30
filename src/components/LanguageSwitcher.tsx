@@ -10,13 +10,13 @@ export const LanguageSwitcher: React.FC = () => {
   };
 
   return (
-    <div className="flex gap-4 text-[10px] tracking-[0.2em] uppercase">
+    <div className="flex gap-5 text-xs tracking-[0.2em] uppercase">
       {['ja', 'en', 'cn'].map((lang) => (
         <button
           key={lang}
           onClick={() => toggleLanguage(lang)}
-          className={`hover:text-sakura transition-colors cursor-pointer ${
-            i18n.language === lang ? 'text-sakura border-b border-sakura/50' : 'text-white/50'
+          className={`hover:text-sakura transition-all duration-300 cursor-pointer ${
+            i18n.language === lang ? 'text-sakura border-b-2 border-sakura/50' : 'text-white/50'
           }`}
         >
           {lang === 'ja' ? 'JP' : lang.toUpperCase()}

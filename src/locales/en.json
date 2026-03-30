@@ -79,9 +79,11 @@
     },
     "info": {
       "name_label": "Company Name",
-      "name_value": "Shouka Design Agency",
+      "name_value": "Shouka Co., Ltd.",
       "established_label": "Established",
-      "established_value": "March 2026",
+      "established_value": "April 2026",
+      "representative_label": "CEO",
+      "representative_value": "Eiji Shimomura",
       "business_label": "Business",
       "business_value": "Web Development, 3D Creative, Web3/Blockchain Solutions, Digital Marketing"
     }
@@ -90,7 +92,10 @@
     "title": "Let's start your new project here.",
     "subtitle": "Contact",
     "lead": "Whether it's bringing an idea to life, checking technical feasibility, or drastically improving an existing site, we're here to help. Let's have a casual talk first.",
-    "button": "Contact Us"
+    "button": "Contact Us",
+    "address_value": "Tenkou Bldg 201, 14-14 Sannotani, Naka-ku, Yokohama, Kanagawa 231-0824, Japan",
+    "phone_value": "090-8813-5055",
+    "email_value": "shouka@info.com"
   },
   "works": {
     "title": "Selected Works",

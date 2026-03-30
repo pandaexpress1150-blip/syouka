@@ -47,7 +47,7 @@ export const ParticleText: React.FC<ParticleTextProps> = ({
 
       // Responsive font size
       const fontSize = Math.min(width * 0.25, 250);
-      ctx.font = `800 ${fontSize}px "Kaisei Tokumin", serif`;
+      ctx.font = `400 ${fontSize}px "Yuji Mai", "Zhi Mang Xing", serif`;
       ctx.fillStyle = "white";
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";

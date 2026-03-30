@@ -39,12 +39,12 @@ export const Navbar: React.FC<{ isLoaded: boolean }> = ({ isLoaded }) => {
         transition={{ duration: 1, delay: 0.5 }}
         className="fixed top-0 left-0 w-full p-6 md:p-10 z-50 flex justify-between items-center mix-blend-difference"
       >
-        <Link to="/" className="text-xl tracking-widest font-serif hover:text-sakura hover:-translate-y-1 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(255,183,197,1)] transition-all duration-300 inline-block relative z-50">
+        <Link to="/" className="text-2xl tracking-widest font-serif hover:text-sakura hover:-translate-y-1 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(255,183,197,1)] transition-all duration-300 inline-block relative z-50">
           昇華
         </Link>
         
         <div className="hidden lg:flex items-center gap-12">
-          <div className="flex gap-8 text-[10px] tracking-[0.3em] uppercase">
+          <div className="flex gap-10 text-xs tracking-[0.3em] uppercase">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -52,7 +52,7 @@ export const Navbar: React.FC<{ isLoaded: boolean }> = ({ isLoaded }) => {
                 className="opacity-70 hover:opacity-100 hover:text-sakura hover:-translate-y-1 hover:scale-110 transition-all duration-300 inline-block relative group"
               >
                 {item.name}
-                <span className="absolute -bottom-2 left-0 w-0 h-[1px] bg-sakura transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-2 left-0 w-0 h-[1.5px] bg-sakura transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
           </div>
