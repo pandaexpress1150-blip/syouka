@@ -1,0 +1,104 @@
+{
+  "nav": {
+    "concept": "理念",
+    "about": "关于",
+    "services": "服务",
+    "works": "案例",
+    "process": "流程",
+    "tech": "技术栈",
+    "company": "公司",
+    "contact": "联系"
+  },
+  "hero": {
+    "scroll": "滚动"
+  },
+  "concept": {
+    "title": "形无形，化有形。",
+    "description": "我们是一家超越边界的创意机构。通过将美学与技术相结合，我们为数字空间注入新的生命，将您的愿景提升为前所未有的体验。"
+  },
+  "services": {
+    "title": "服务",
+    "subtitle": "提供价值",
+    "web_dev": {
+      "title": "Web Development & Design",
+      "concept": "直观体验，稳健代码。",
+      "description": "通过 Next.js 和 Tailwind CSS 构建高性能前端，将触动人心的设计与卓越的性能完美结合，赋能业务增长。我们追求“功能性之美”，通过精细计算的用户视线引导设计，在所有设备上提供无缝体验。"
+    },
+    "interaction": {
+      "title": "Creative Interaction (3D/WebGL)",
+      "concept": "为浏览器注入惊喜与沉浸感。",
+      "description": "利用 Three.js 和 WebGL 技术，打破静态页面的局限，以动态视觉叙事展现品牌深度，打造令人难忘的数字体验。将创意与工程高度融合，实现与滚动同步的交互动画以及浏览器端模拟器开发。"
+    },
+    "web3": {
+      "title": "Web3 & Blockchain Solution",
+      "concept": "掌控下一代互联网机遇。",
+      "description": "从智能合约开发到 dApp 构建，我们将复杂的 Web3 技术转化为优化的商业解决方案，助力企业布局未来。构建安全且可扩展的基础设施，包括钱包连接优化和区块链上的透明数据管理。"
+    }
+  },
+  "process": {
+    "title": "制作流程",
+    "subtitle": "Process",
+    "step1": {
+      "title": "战略规划 (Strategy)",
+      "description": "深入了解业务目标的访谈。通过竞争调研和技术可行性研究，制定项目路线图。"
+    },
+    "step2": {
+      "title": "设计与原型 (Design & Prototype)",
+      "description": "在早期阶段创建原型。在验证实际操作感的同时，完善设计和用户流程。"
+    },
+    "step3": {
+      "title": "敏捷开发 (Agile Development)",
+      "description": "使用现代框架快速实施。始终共享最新进度，并根据反馈进行灵活调整。"
+    },
+    "step4": {
+      "title": "上线与发布 (Launch)",
+      "description": "优化到 Vercel 和 Cloudflare 等现代平台的部署。确保从域名设置到安全措施的完美启动。"
+    },
+    "step5": {
+      "title": "增长与维护 (Growth & Maintenance)",
+      "description": "上线只是开始。我们将持续提供基于数据分析的改进方案、技术更新和功能扩展支持。"
+    }
+  },
+  "tech": {
+    "title": "技术栈",
+    "subtitle": "Technology Stack",
+    "description": "在快速变化的科技行业中，我们妥善平衡“成熟技术”的稳定性和“前沿技术”的创新性。",
+    "sections": {
+      "frontend": "Front-end: TypeScript, Next.js, React, Tailwind CSS",
+      "creative": "Creative: Three.js, GSAP, Spline, WebGL",
+      "backend": "Backend / Infrastructure: Node.js, Vercel, Cloudflare, Supabase, PostgreSQL",
+      "web3": "Web3: Solidity, Polygon, Solana (Anchor), Ethers.js, WalletConnect"
+    }
+  },
+  "company": {
+    "title": "公司概要",
+    "subtitle": "Company",
+    "message": {
+      "title": "「重塑 Web 的无限可能」",
+      "content": "互联网已从信息海洋进化为体验的舞台。我们精心打磨每一行代码和每一个像素，成为推动您业务迈向下一阶段的引擎。"
+    },
+    "info": {
+      "name_label": "公司名称",
+      "name_value": "昇華设计代理机构",
+      "established_label": "成立日期",
+      "established_value": "2026年 3月",
+      "business_label": "业务范围",
+      "business_value": "Web 网站及应用规划制作、3D 创意制作、Web3/区块链相关开发、数字营销支援"
+    }
+  },
+  "contact": {
+    "title": "在这里开始您的新项目。",
+    "subtitle": "Contact",
+    "lead": "无论是想实现一个创意，还是咨询技术可行性，或者是彻底改进现有网站，我们都在这里为您提供支持。欢迎先进行轻松的交流。",
+    "button": "联系我们"
+  },
+  "works": {
+    "title": "案例展示",
+    "subtitle": "Works",
+    "view_all": "查看全部"
+  },
+  "footer": {
+    "description": "美学与功能的交汇处。将您的愿景提升为世界级的数字存在。",
+    "rights": "Shouka Design Agency. All rights reserved."
+  }
+}

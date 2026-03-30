@@ -1,0 +1,104 @@
+{
+  "nav": {
+    "concept": "Concept",
+    "about": "About",
+    "services": "Services",
+    "works": "Works",
+    "process": "Process",
+    "tech": "Tech Stack",
+    "company": "Company",
+    "contact": "Contact"
+  },
+  "hero": {
+    "scroll": "Scroll"
+  },
+  "concept": {
+    "title": "形なきものが、姿を現す場所。",
+    "description": "私たちは、境界を越えるクリエイティブ・エージェンシーです。美意識とテクノロジーを融合させ、デジタル空間に新たな生命を吹き込みます。あなたのビジョンを、誰も見たことのない体験へと昇華させます。"
+  },
+  "services": {
+    "title": "提供する価値",
+    "subtitle": "Services",
+    "web_dev": {
+      "title": "Web Development & Design",
+      "concept": "高速なユーザー体験と、ブランドを体現するデザイン。",
+      "description": "現代のWebサイトに求められるのは、一瞬で表示されるスピードと、直感的な操作性です。私たちは Next.js や Tailwind CSS を採用し、ヘッドレス構成や静的ジェネレーション（SSG）を駆使した、極めてパフォーマンスの高いフロントエンド実装を行います。 デザインにおいては、単なる装飾ではなく「機能する美しさ」を追求。ユーザーの視線誘導を緻密に計算したUI設計と、デバイスを問わないシームレスな体験を提供します。"
+    },
+    "interaction": {
+      "title": "Creative Interaction (3D/WebGL)",
+      "concept": "画面の向こう側に、没入感を。",
+      "description": "静的なページでは伝えきれないブランドの熱量を、Three.js や WebGL を用いた3D演出でダイナミックに表現します。スクロールに連動するインタラクティブなアニメーションや、ブラウザ上でのシミュレーター開発など、クリエイティブとエンジニアリングを高度に融合。ユーザーが思わず手を止めて見入ってしまう、記憶に残るデジタル体験を構築します。"
+    },
+    "web3": {
+      "title": "Web3 & Blockchain Solution",
+      "concept": "次世代の経済圏を、ビジネスの力に。",
+      "description": "スマートコントラクトの開発から、独自トークンの発行、dAppsの構築まで、Web3領域のフルスタック開発に対応します。ウォレット接続の最適化や、ブロックチェーン上での透明性の高いデータ管理など、セキュアでスケーラブルなインフラを構築。DeFiやNFT、DAOといった新しい枠組みを、ビジネスモデルに最適化した形で実装し、新しい価値の創出を支援します。"
+    }
+  },
+  "process": {
+    "title": "制作の流れ",
+    "subtitle": "Process",
+    "step1": {
+      "title": "Discovery & Strategy（理解と戦略）",
+      "description": "ビジネスゴールを深く理解するためのヒアリング。競合調査や技術的な実現可能性の検討を行い、プロジェクトの羅針盤を策定します。"
+    },
+    "step2": {
+      "title": "Design & Prototyping（設計と試作）",
+      "description": "早い段階でプロトタイプを作成。実際の操作感を確かめながら、デザインとユーザーフローをブラッシュアップします。"
+    },
+    "step3": {
+      "title": "Agile Development（アジャイル開発）",
+      "description": "モダンなフレームワークを用い、スピーディーに実装。常に最新の進捗を共有し、フィードバックを取り入れながら柔軟に開発を進めます。"
+    },
+    "step4": {
+      "title": "Deployment & Launch（公開・実装）",
+      "description": "VercelやCloudflareなどのモダンなプラットフォームへのデプロイを最適化。ドメイン設定からセキュリティ対策まで、完璧な状態でのローンチを約束します。"
+    },
+    "step5": {
+      "title": "Growth & Maintenance（成長と保守）",
+      "description": "公開はスタートに過ぎません。データ分析に基づいた改善提案や、技術的なアップデート、ビジネスの拡張に伴う機能追加を継続的にサポートします。"
+    }
+  },
+  "tech": {
+    "title": "技術スタック",
+    "subtitle": "Technology Stack",
+    "description": "変化の速いテック業界において、私たちは「枯れた技術」の安定性と「最先端技術」の革新性を適切に使い分けます。",
+    "sections": {
+      "frontend": "Front-end: TypeScript, Next.js, React, Tailwind CSS",
+      "creative": "Creative: Three.js, GSAP, Spline, WebGL",
+      "backend": "Backend / Infrastructure: Node.js, Vercel, Cloudflare, Supabase, PostgreSQL",
+      "web3": "Web3: Solidity, Polygon, Solana (Anchor), Ethers.js, WalletConnect"
+    }
+  },
+  "company": {
+    "title": "会社概要",
+    "subtitle": "Company",
+    "message": {
+      "title": "「Webの可能性を再定義する」",
+      "content": "インターネットは情報の海から、体験の舞台へと進化しました。私たちは、コード一行、ピクセル一つにこだわり抜き、クライアントのビジネスを次のステージへと押し上げるエンジンとなります。"
+    },
+    "info": {
+      "name_label": "社名",
+      "name_value": "昇華 （合同会社/株式会社）",
+      "established_label": "設立",
+      "established_value": "2026年 3月",
+      "business_label": "事業内容",
+      "business_value": "Webサイト・Webアプリケーションの企画・制作、3Dクリエイティブ制作、Web3/ブロックチェーン関連開発、デジタルマーケティング支援"
+    }
+  },
+  "contact": {
+    "title": "新しいプロジェクトを、ここから始めましょう。",
+    "subtitle": "Contact",
+    "lead": "「こんなアイデアを形にしたい」「技術的に可能かどうか知りたい」「既存のサイトを劇的に改善したい」どんな小さなきっかけでも構いません。スタートアップならではの機動力で、あなたのビジョンを具現化するお手伝いをします。まずはカジュアルにお話ししましょう。",
+    "button": "Contact Us"
+  },
+  "works": {
+    "title": "実績",
+    "subtitle": "Selected Works",
+    "view_all": "View All"
+  },
+  "footer": {
+    "description": "美しさと機能性が交差する場所。あなたのビジョンが、世界に姿を現す瞬間を共に。",
+    "rights": "Shouka Design Agency. All rights reserved."
+  }
+}

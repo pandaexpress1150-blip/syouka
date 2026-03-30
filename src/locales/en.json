@@ -1,0 +1,104 @@
+{
+  "nav": {
+    "concept": "Concept",
+    "about": "About",
+    "services": "Services",
+    "works": "Works",
+    "process": "Process",
+    "tech": "Tech Stack",
+    "company": "Company",
+    "contact": "Contact"
+  },
+  "hero": {
+    "scroll": "Scroll"
+  },
+  "concept": {
+    "title": "Where the intangible takes form.",
+    "description": "We are a creative agency that transcends boundaries. By blending aesthetics with technology, we breathe new life into digital spaces, elevating your vision into an experience like no other."
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "Providing Value",
+    "web_dev": {
+      "title": "Web Development & Design",
+      "concept": "Intuitive Experience, Robust Code.",
+      "description": "Combining emotional design with high-performance frontend implementation using Next.js and Tailwind CSS to accelerate your digital presence. We pursue 'functional beauty' rather than mere decoration, with UI design meticulously calculated for user gaze guidance and seamless experience across all devices."
+    },
+    "interaction": {
+      "title": "Creative Interaction (3D/WebGL)",
+      "concept": "Bringing Immersive Wonders to the Browser.",
+      "description": "Leveraging Three.js and WebGL to create dynamic visual storytelling that goes beyond static pages, leaving a lasting impression. Highly fusing creativity and engineering with interactive animations synchronized with scrolling and simulator development on the browser."
+    },
+    "web3": {
+      "title": "Web3 & Blockchain Solution",
+      "concept": "Empowering the Next Generation of the Internet.",
+      "description": "From smart contract development to dApp architecture, we optimize complex Web3 technologies for your business integration. Building secure and scalable infrastructure, including wallet connection optimization and transparent data management on the blockchain."
+    }
+  },
+  "process": {
+    "title": "Our Process",
+    "subtitle": "Production Flow",
+    "step1": {
+      "title": "Discovery & Strategy",
+      "description": "Interviews to deeply understand business goals. Examining competitive research and technical feasibility to formulate the project roadmap."
+    },
+    "step2": {
+      "title": "Design & Prototyping",
+      "description": "Create prototypes at an early stage. Refine the design and user flow while verifying the actual operational feel."
+    },
+    "step3": {
+      "title": "Agile Development",
+      "description": "Rapidly implement using modern frameworks. Always share the latest progress and proceed flexibly by incorporating feedback."
+    },
+    "step4": {
+      "title": "Deployment & Launch",
+      "description": "Optimize deployment to modern platforms such as Vercel and Cloudflare. Ensure a perfect launch from domain settings to security measures."
+    },
+    "step5": {
+      "title": "Growth & Maintenance",
+      "description": "The launch is just the beginning. Continuously support improvement proposals based on data analysis, technical updates, and additional feature implementations."
+    }
+  },
+  "tech": {
+    "title": "Tech Stack",
+    "subtitle": "Technology Stack",
+    "description": "In the fast-moving tech industry, we appropriately balance the stability of 'battle-tested tech' and the innovation of 'cutting-edge tech'.",
+    "sections": {
+      "frontend": "Front-end: TypeScript, Next.js, React, Tailwind CSS",
+      "creative": "Creative: Three.js, GSAP, Spline, WebGL",
+      "backend": "Backend / Infrastructure: Node.js, Vercel, Cloudflare, Supabase, PostgreSQL",
+      "web3": "Web3: Solidity, Polygon, Solana (Anchor), Ethers.js, WalletConnect"
+    }
+  },
+  "company": {
+    "title": "Company",
+    "subtitle": "About Us",
+    "message": {
+      "title": "Redefining Web Possibilities",
+      "content": "The internet has evolved from an ocean of information to a stage for experiences. We focus on every line of code and every pixel to become the engine that pushes your business to the next stage."
+    },
+    "info": {
+      "name_label": "Company Name",
+      "name_value": "Shouka Design Agency",
+      "established_label": "Established",
+      "established_value": "March 2026",
+      "business_label": "Business",
+      "business_value": "Web Development, 3D Creative, Web3/Blockchain Solutions, Digital Marketing"
+    }
+  },
+  "contact": {
+    "title": "Let's start your new project here.",
+    "subtitle": "Contact",
+    "lead": "Whether it's bringing an idea to life, checking technical feasibility, or drastically improving an existing site, we're here to help. Let's have a casual talk first.",
+    "button": "Contact Us"
+  },
+  "works": {
+    "title": "Selected Works",
+    "subtitle": "Works",
+    "view_all": "View All"
+  },
+  "footer": {
+    "description": "Where beauty and functionality intersect. Elevating your vision into a world-class digital presence.",
+    "rights": "Shouka Design Agency. All rights reserved."
+  }
+}
