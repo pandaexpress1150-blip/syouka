@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
 import { Section } from "../components/Section";
-import { Palette, Code, Sparkles, Globe, Cpu, BrainCircuit } from "lucide-react";
+import { Globe, Cpu, BrainCircuit } from "lucide-react";
 
 export const Services: React.FC = () => {
   const { t } = useTranslation();
@@ -10,17 +10,17 @@ export const Services: React.FC = () => {
   const services = [
     {
       key: "web_dev",
-      icon: <Globe className="w-8 h-8" />,
+      icon: Globe,
       color: "from-blue-500/20 to-cyan-500/20",
     },
     {
       key: "interaction",
-      icon: <Cpu className="w-8 h-8" />,
+      icon: Cpu,
       color: "from-sakura/20 to-purple-500/20",
     },
     {
       key: "ai",
-      icon: <BrainCircuit className="w-8 h-8" />,
+      icon: BrainCircuit,
       color: "from-orange-500/20 to-yellow-500/20",
     }
   ];
@@ -55,7 +55,7 @@ export const Services: React.FC = () => {
               <div className={`p-10 md:p-16 rounded-[40px] bg-gradient-to-br ${service.color} border border-white/10 relative overflow-hidden group ${i % 2 !== 0 ? 'lg:order-2' : ''}`}>
                 <div className="absolute inset-0 bg-white/[0.02] group-hover:bg-transparent transition-colors duration-500" />
                 <div className="relative z-10 w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white/5 flex items-center justify-center text-sakura mb-8 md:mb-12 group-hover:scale-110 transition-transform duration-500">
-                  {React.cloneElement(service.icon as React.ReactElement, { className: "w-10 h-10" })}
+                  {React.createElement(service.icon, { className: "w-10 h-10" })}
                 </div>
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif tracking-widest mb-6 md:mb-10">
                   {t(`services.${service.key}.title`)}

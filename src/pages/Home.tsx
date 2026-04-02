@@ -7,9 +7,6 @@ import { useTranslation } from "react-i18next";
 import {
   ArrowRight,
   ChevronDown,
-  Code,
-  Palette,
-  Sparkles,
   Mail,
 } from "lucide-react";
 
@@ -41,11 +38,14 @@ export const Home: React.FC = () => {
     }
   ];
 
-  const worksData: Work[] = (t('works.items', { returnObjects: true }) as any[]).map((item, index) => ({
-    ...item,
-    ...staticWorksData[index],
-    testimonial: "" // Testimonials were requested to be removed earlier
-  }));
+  const worksItems = t('works.items', { returnObjects: true });
+  const worksData: Work[] = Array.isArray(worksItems) 
+    ? worksItems.map((item, index) => ({
+        ...item,
+        ...staticWorksData[index],
+        testimonial: "" // Testimonials were requested to be removed earlier
+      }))
+    : [];
 
   const selectedWork = selectedWorkIndex !== null ? worksData[selectedWorkIndex] : null;
 
@@ -144,7 +144,8 @@ export const Home: React.FC = () => {
             </p>
 
             <div className="grid md:grid-cols-3 gap-8">
-              {(t('summary.features', { returnObjects: true }) as any[]).map((feature: any, idx: number) => (
+              {Array.isArray(t('summary.features', { returnObjects: true })) && 
+                (t('summary.features', { returnObjects: true }) as any[]).map((feature: any, idx: number) => (
                 <div key={idx} className="space-y-4">
                   <h4 className="text-white font-serif tracking-widest text-lg border-l-2 border-sakura pl-4">
                     {feature.title}
