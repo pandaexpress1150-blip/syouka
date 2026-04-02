@@ -29,13 +29,13 @@ export const Footer: React.FC = () => {
               </a>
             </p>
             <p className="pt-2">
-              <a href={`mailto:${t('contact.email_value')}`} className="hover:text-sakura transition-all duration-300 inline-block">{t('contact.email_value')}</a>
+              <a href={`mailto:${t('contact.email_value')}`} className="font-sans hover:text-sakura transition-all duration-300 inline-block">{t('contact.email_value')}</a>
             </p>
           </address>
         </div>
       </div>
       
-      <div className="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs tracking-widest text-gray-600">
+      <div className="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs tracking-widest text-gray-600 font-sans">
         <p>
           &copy; {new Date().getFullYear()} {t('footer.rights')}
         </p>

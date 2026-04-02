@@ -51,7 +51,7 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen bg-navy text-white overflow-x-hidden relative flex flex-col">
+      <div className="min-h-screen bg-navy text-white overflow-x-hidden relative z-10 flex flex-col">
         <Navbar isLoaded={isLoaded} />
         
         <main className="flex-grow">

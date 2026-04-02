@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
 import { Section } from "../components/Section";
@@ -6,9 +6,27 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 export const Contact: React.FC = () => {
   const { t } = useTranslation();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const { name, email, message } = formData;
+    const subject = encodeURIComponent(`Contact from ${name}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+    window.location.href = `mailto:info@syouka.design?subject=${subject}&body=${body}`;
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
 
   return (
-    <div className="pt-32 pb-20">
+    <div className="pt-32 pb-20 relative z-10">
       <Section id="contact-hero" className="text-center mb-24 md:mb-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -54,7 +72,7 @@ export const Contact: React.FC = () => {
                   <h3 className="text-xs tracking-[0.4em] uppercase text-sakura/50 mb-3 group-hover:text-sakura transition-colors">
                     {item.label}
                   </h3>
-                  <p className="text-white tracking-widest leading-loose text-base md:text-xl">
+                  <p className="text-white tracking-widest leading-loose text-base md:text-xl font-sans">
                     {item.value}
                   </p>
                 </div>
@@ -69,14 +87,21 @@ export const Contact: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 1 }}
         >
-          <form className="space-y-8 md:space-y-12 p-10 md:p-16 rounded-[40px] md:rounded-[60px] bg-white/[0.02] border border-white/5 relative overflow-hidden group">
+          <form 
+            onSubmit={handleSubmit}
+            className="space-y-8 md:space-y-12 p-10 md:p-16 rounded-[40px] md:rounded-[60px] bg-white/[0.02] border border-white/5 relative overflow-hidden group pointer-events-auto"
+          >
             <div className="absolute top-0 right-0 w-full h-1 bg-gradient-to-r from-transparent via-sakura/30 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-700" />
             <div className="grid md:grid-cols-2 gap-8 md:gap-12">
               <div className="space-y-3 md:space-y-4">
                 <label className="text-xs tracking-[0.4em] uppercase text-sakura/50 ml-6">Name</label>
                 <input 
                   type="text" 
-                  className="w-full px-8 py-5 md:py-6 rounded-full bg-navy border border-white/10 focus:border-sakura outline-none transition-colors tracking-widest text-base"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-8 py-5 md:py-6 rounded-full bg-navy border border-white/10 focus:border-sakura outline-none transition-colors tracking-widest text-base font-sans"
                   placeholder="Your Name"
                 />
               </div>
@@ -84,7 +109,11 @@ export const Contact: React.FC = () => {
                 <label className="text-xs tracking-[0.4em] uppercase text-sakura/50 ml-6">Email</label>
                 <input 
                   type="email" 
-                  className="w-full px-8 py-5 md:py-6 rounded-full bg-navy border border-white/10 focus:border-sakura outline-none transition-colors tracking-widest text-base"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-8 py-5 md:py-6 rounded-full bg-navy border border-white/10 focus:border-sakura outline-none transition-colors tracking-widest text-base font-sans"
                   placeholder="hello@example.com"
                 />
               </div>
@@ -93,11 +122,18 @@ export const Contact: React.FC = () => {
               <label className="text-xs tracking-[0.4em] uppercase text-sakura/50 ml-6">Message</label>
               <textarea 
                 rows={5}
-                className="w-full px-8 md:px-10 py-6 md:py-8 rounded-[30px] md:rounded-[40px] bg-navy border border-white/10 focus:border-sakura outline-none transition-colors tracking-widest text-base resize-none"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                className="w-full px-8 md:px-10 py-6 md:py-8 rounded-[30px] md:rounded-[40px] bg-navy border border-white/10 focus:border-sakura outline-none transition-colors tracking-widest text-base resize-none font-sans"
                 placeholder="Tell us about your project..."
               />
             </div>
-            <button className="group relative w-full inline-flex items-center justify-center px-10 py-6 md:py-7 font-serif tracking-widest text-lg overflow-hidden rounded-full bg-white text-navy hover:text-white transition-all duration-500">
+            <button 
+              type="submit"
+              className="group relative w-full inline-flex items-center justify-center px-10 py-6 md:py-7 font-serif tracking-widest text-lg overflow-hidden rounded-full bg-white text-navy hover:text-white transition-all duration-500"
+            >
               <span className="absolute inset-0 w-full h-full bg-sakura -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out" />
               <span className="relative flex items-center gap-3">
                 Send Message
