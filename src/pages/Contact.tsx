@@ -26,7 +26,7 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <div className="pt-32 pb-20 relative z-10">
+    <div className="pt-32 pb-20">
       <Section id="contact-hero" className="text-center mb-24 md:mb-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -89,7 +89,7 @@ export const Contact: React.FC = () => {
         >
           <form 
             onSubmit={handleSubmit}
-            className="space-y-8 md:space-y-12 p-10 md:p-16 rounded-[40px] md:rounded-[60px] bg-white/[0.02] border border-white/5 relative overflow-hidden group pointer-events-auto"
+            className="space-y-8 md:space-y-12 p-10 md:p-16 rounded-[40px] md:rounded-[60px] bg-white/[0.02] border border-white/5 relative overflow-hidden group"
           >
             <div className="absolute top-0 right-0 w-full h-1 bg-gradient-to-r from-transparent via-sakura/30 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-700" />
             <div className="grid md:grid-cols-2 gap-8 md:gap-12">
