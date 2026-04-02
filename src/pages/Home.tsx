@@ -4,6 +4,7 @@ import { ParticleText } from "../components/ParticleText";
 import { Section } from "../components/Section";
 import { WorkModal, type Work } from "../components/WorkModal";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import {
   ArrowRight,
   ChevronDown,
@@ -243,15 +244,15 @@ export const Home: React.FC = () => {
           <h2 className="text-2xl md:text-5xl font-serif tracking-widest mb-12 whitespace-pre-wrap">
             {t('contact.title')}
           </h2>
-          <button 
+          <Link 
+            to="/contact"
             className="group relative inline-flex items-center justify-center px-10 py-5 font-serif tracking-widest text-base overflow-hidden rounded-full bg-white text-navy hover:text-white hover:scale-110 hover:shadow-[0_0_20px_rgba(255,183,197,0.8)] transition-all duration-500"
-            onClick={() => window.location.href = '/contact'}
           >
             <span className="absolute inset-0 w-full h-full bg-sakura -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out" />
             <span className="relative flex items-center gap-3">
               <Mail className="w-5 h-5" /> {t('contact.button')}
             </span>
-          </button>
+          </Link>
         </motion.div>
       </Section>
 
