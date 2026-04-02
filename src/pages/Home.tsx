@@ -20,42 +20,34 @@ export const Home: React.FC = () => {
   const y = useTransform(scrollYProgress, [0, 0.1], [0, -50]);
 
   const [isLoaded, setIsLoaded] = useState(false);
-  const [selectedWork, setSelectedWork] = useState<Work | null>(null);
+  const [selectedWorkIndex, setSelectedWorkIndex] = useState<number | null>(null);
 
-  const worksData: Work[] = [
+  const staticWorksData = [
     {
-      title: "Ethereal Beauty",
-      category: "Cosmetics Brand",
       img: "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?q=80&w=1600&auto=format&fit=crop",
-      description: "A complete rebranding and e-commerce platform redesign for a luxury cosmetics line. The goal was to translate their physical store's serene and premium atmosphere into a digital experience with seamless purchasing flows.",
       technologies: ["React", "Three.js", "Shopify Plus", "Tailwind CSS"],
-      testimonial: "昇華 transformed our digital presence. The new site perfectly captures the essence of our brand, resulting in a 40% increase in online conversions within the first month."
     },
     {
-      title: "Silent Architecture",
-      category: "Architecture Firm",
       img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop",
-      description: "A minimalist portfolio website for an award-winning architecture firm. We focused on large-scale typography, smooth page transitions, and high-resolution imagery to let their work speak for itself.",
       technologies: ["Next.js", "Framer Motion", "Headless CMS", "WebGL"],
-      testimonial: "The attention to detail in the animations and typography is outstanding. It feels less like a website and more like an interactive digital gallery of our buildings."
     },
     {
-      title: "Liquid Sound",
-      category: "Audio Equipment",
       img: "https://images.unsplash.com/photo-1558089687-f282ffcbc126?q=80&w=1600&auto=format&fit=crop",
-      description: "An immersive promotional site for a new line of high-end audiophile headphones. We implemented audio-reactive visualizers and 3D product models to convey the 'liquid' quality of their sound engineering.",
       technologies: ["Vue.js", "Web Audio API", "GSAP", "Three.js"],
-      testimonial: "They didn't just build a website; they built an experience. Users spend an average of 5 minutes just playing with the interactive sound visualizer on the landing page."
     },
     {
-      title: "Zen Garden",
-      category: "Luxury Hotel",
       img: "https://images.unsplash.com/photo-1545042746-ec9e5a59b359?q=80&w=1600&auto=format&fit=crop",
-      description: "A booking platform and digital concierge for a boutique traditional Japanese ryokan. The design balances modern usability with traditional 'Wabi-Sabi' aesthetics, featuring subtle micro-interactions.",
       technologies: ["React", "TypeScript", "Node.js", "PostgreSQL"],
-      testimonial: "Our guests frequently compliment the booking process. It sets a calming, luxurious tone before they even arrive at our property."
     }
   ];
+
+  const worksData: Work[] = (t('works.items', { returnObjects: true }) as any[]).map((item, index) => ({
+    ...item,
+    ...staticWorksData[index],
+    testimonial: "" // Testimonials were requested to be removed earlier
+  }));
+
+  const selectedWork = selectedWorkIndex !== null ? worksData[selectedWorkIndex] : null;
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -213,7 +205,7 @@ export const Home: React.FC = () => {
               transition={{ duration: 0.8, delay: i % 2 === 0 ? 0 : 0.2 }}
               whileHover={{ scale: 1.02, y: -5 }}
               className="group cursor-pointer"
-              onClick={() => setSelectedWork(work)}
+              onClick={() => setSelectedWorkIndex(i)}
             >
               <div className="relative overflow-hidden rounded-xl aspect-[4/3] mb-6 md:mb-8 transition-all duration-500 group-hover:shadow-[0_15px_40px_-10px_rgba(255,183,197,0.25)] group-hover:ring-1 group-hover:ring-white/10">
                 <div className="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-colors duration-500 z-10" />
@@ -262,7 +254,7 @@ export const Home: React.FC = () => {
         </motion.div>
       </Section>
 
-      <WorkModal work={selectedWork} onClose={() => setSelectedWork(null)} />
+      <WorkModal work={selectedWork} onClose={() => setSelectedWorkIndex(null)} />
     </>
   );
 };

@@ -122,7 +122,33 @@
   "works": {
     "title": "制作案例",
     "subtitle": "Case Studies",
-    "view_all": "查看全部"
+    "view_all": "查看全部",
+    "modal": {
+      "overview": "项目概览",
+      "technologies": "采用技术"
+    },
+    "items": [
+      {
+        "title": "Ethereal Beauty",
+        "category": "化妆品品牌",
+        "description": "奢侈化妆品系列的完整品牌重塑和电子商务平台重新设计。目标是将其实体店宁静而优质的氛围转化为具有无缝购买流程的数字体验。"
+      },
+      {
+        "title": "Silent Architecture",
+        "category": "建筑师事务所",
+        "description": "为一家屡获殊荣的建筑师事务所设计的极简作品集网站。我们专注于大规模排版、流畅的页面过渡和高分辨率图像，让作品本身说话。"
+      },
+      {
+        "title": "Liquid Sound",
+        "category": "音频设备",
+        "description": "高端发烧友耳机的全新系列沉浸式促销网站。我们实现了音频反应可视化器和 3D 产品模型，以传达其声学工程的“液体”品质。"
+      },
+      {
+        "title": "Zen Garden",
+        "category": "精品酒店",
+        "description": "为一家精品传统日式旅馆设计的预订平台和数字礼宾。设计平衡了现代易用性与传统的“侘寂”美学，具有微妙的微交互功能。"
+      }
+    ]
   },
   "footer": {
     "description": "美学与功能的交汇处。将您的愿景提升为世界级的数字存在。",

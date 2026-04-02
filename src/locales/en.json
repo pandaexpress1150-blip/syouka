@@ -122,7 +122,33 @@
   "works": {
     "title": "Selected Projects",
     "subtitle": "Showcase",
-    "view_all": "View All"
+    "view_all": "View All",
+    "modal": {
+      "overview": "Project Overview",
+      "technologies": "Technologies"
+    },
+    "items": [
+      {
+        "title": "Ethereal Beauty",
+        "category": "Cosmetics Brand",
+        "description": "A complete rebranding and e-commerce platform redesign for a luxury cosmetics line. The goal was to translate their physical store's serene and premium atmosphere into a digital experience with seamless purchasing flows."
+      },
+      {
+        "title": "Silent Architecture",
+        "category": "Architecture Firm",
+        "description": "A minimalist portfolio website for an award-winning architecture firm. We focused on large-scale typography, smooth page transitions, and high-resolution imagery to let their work speak for itself."
+      },
+      {
+        "title": "Liquid Sound",
+        "category": "Audio Equipment",
+        "description": "An immersive promotional site for a new line of high-end audiophile headphones. We implemented audio-reactive visualizers and 3D product models to convey the 'liquid' quality of their sound engineering."
+      },
+      {
+        "title": "Zen Garden",
+        "category": "Luxury Hotel",
+        "description": "A booking platform and digital concierge for a boutique traditional Japanese ryokan. The design balances modern usability with traditional 'Wabi-Sabi' aesthetics, featuring subtle micro-interactions."
+      }
+    ]
   },
   "footer": {
     "description": "Where beauty and functionality intersect. Elevating your vision into a world-class digital presence.",

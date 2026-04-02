@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export interface Work {
   title: string;
@@ -17,6 +18,7 @@ interface WorkModalProps {
 }
 
 export const WorkModal: React.FC<WorkModalProps> = ({ work, onClose }) => {
+  const { t } = useTranslation();
   // Prevent scrolling when modal is open
   useEffect(() => {
     if (work) {
@@ -74,12 +76,12 @@ export const WorkModal: React.FC<WorkModalProps> = ({ work, onClose }) => {
               
               <div className="space-y-8 text-gray-300 text-sm leading-relaxed tracking-wide">
                 <div>
-                  <h4 className="text-white font-serif tracking-wider mb-3 text-lg">Project Overview</h4>
+                  <h4 className="text-white font-serif tracking-wider mb-3 text-lg">{t('works.modal.overview')}</h4>
                   <p className="opacity-80">{work.description}</p>
                 </div>
 
                 <div>
-                  <h4 className="text-white font-serif tracking-wider mb-3 text-lg">Technologies</h4>
+                  <h4 className="text-white font-serif tracking-wider mb-3 text-lg">{t('works.modal.technologies')}</h4>
                   <div className="flex flex-wrap gap-2">
                     {work.technologies.map((tech, idx) => (
                       <span key={idx} className="px-4 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs tracking-wider">
