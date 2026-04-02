@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-serif: "Cinzel", "Yuji Mai", "Zhi Mang Xing", serif;
+  --font-serif: "Cinzel", "Kaisei Tokumin", "Klee One", "Zhi Mang Xing", serif;
   --font-sans: "Inter", sans-serif;
   --color-navy: #0a0f1a;
   --color-sakura: #ffb7c5;

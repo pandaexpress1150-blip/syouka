@@ -19,10 +19,13 @@ const ScrollToTop = () => {
     if (!hash) {
       window.scrollTo(0, 0);
     } else {
-      const element = document.getElementById(hash.replace('#', ''));
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+      const timer = setTimeout(() => {
+        const element = document.getElementById(hash.replace('#', ''));
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+      return () => clearTimeout(timer);
     }
   }, [pathname, hash]);
 
@@ -49,7 +52,6 @@ export default function App() {
     <Router>
       <ScrollToTop />
       <div className="min-h-screen bg-navy text-white overflow-x-hidden relative flex flex-col">
-        <SakuraBackground />
         <Navbar isLoaded={isLoaded} />
         
         <main className="flex-grow">
@@ -65,6 +67,7 @@ export default function App() {
 
         <Footer />
       </div>
+      <SakuraBackground />
     </Router>
   );
 }

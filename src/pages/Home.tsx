@@ -119,6 +119,70 @@ export const Home: React.FC = () => {
         </div>
       </Section>
 
+      {/* Company Summary Section */}
+      <Section
+        id="summary"
+        className="py-20 md:py-32 bg-white/[0.01] border-y border-white/5"
+      >
+        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="md:col-span-1"
+          >
+            <h3 className="text-xs md:text-sm tracking-[0.4em] uppercase text-sakura mb-6">
+              {t('summary.subtitle')}
+            </h3>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif tracking-widest leading-tight">
+              {t('summary.title')}
+            </h2>
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="md:col-span-2"
+          >
+            <p className="text-base md:text-xl text-gray-400 leading-loose tracking-wide whitespace-pre-wrap mb-12">
+              {t('summary.content')}
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {(t('summary.features', { returnObjects: true }) as any[]).map((feature: any, idx: number) => (
+                <div key={idx} className="space-y-4">
+                  <h4 className="text-white font-serif tracking-widest text-lg border-l-2 border-sakura pl-4">
+                    {feature.title}
+                  </h4>
+                  <p className="text-gray-500 text-sm leading-relaxed">
+                    {feature.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Added Philosophy Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="max-w-4xl mx-auto mt-20 md:mt-32 p-10 md:p-16 rounded-[40px] bg-gradient-to-br from-sakura/5 to-transparent border border-sakura/10"
+        >
+          <h3 className="text-2xl md:text-3xl font-serif tracking-widest mb-8 text-white">
+            {t('summary.philosophy.title')}
+          </h3>
+          <p className="text-base md:text-xl text-gray-400 leading-loose tracking-wide whitespace-pre-wrap">
+            {t('summary.philosophy.content')}
+          </p>
+        </motion.div>
+      </Section>
+
       {/* Works Section */}
       <Section id="works" className="py-20 md:py-32">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24 gap-6">

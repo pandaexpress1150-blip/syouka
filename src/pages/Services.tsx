@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
 import { Section } from "../components/Section";
-import { Palette, Code, Sparkles, Globe, Cpu, Link as LinkIcon } from "lucide-react";
+import { Palette, Code, Sparkles, Globe, Cpu, BrainCircuit } from "lucide-react";
 
 export const Services: React.FC = () => {
   const { t } = useTranslation();
@@ -19,8 +19,8 @@ export const Services: React.FC = () => {
       color: "from-sakura/20 to-purple-500/20",
     },
     {
-      key: "web3",
-      icon: <LinkIcon className="w-8 h-8" />,
+      key: "ai",
+      icon: <BrainCircuit className="w-8 h-8" />,
       color: "from-orange-500/20 to-yellow-500/20",
     }
   ];
@@ -73,7 +73,7 @@ export const Services: React.FC = () => {
                     src={
                         service.key === 'web_dev' ? "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200" :
                         service.key === 'interaction' ? "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=1200" :
-                        "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1200"
+                        "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200"
                     } 
                     alt={t(`services.${service.key}.title`)}
                     className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"

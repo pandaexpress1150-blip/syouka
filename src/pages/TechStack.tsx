@@ -10,7 +10,7 @@ export const TechStack: React.FC = () => {
     { key: "frontend", title: "Front-end" },
     { key: "creative", title: "Creative" },
     { key: "backend", title: "Backend / Infrastructure" },
-    { key: "web3", title: "Web3" }
+    { key: "ai", title: "AI Solution" }
   ];
 
   return (

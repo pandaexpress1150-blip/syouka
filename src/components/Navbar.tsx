@@ -21,6 +21,24 @@ export const Navbar: React.FC<{ isLoaded: boolean }> = ({ isLoaded }) => {
     };
   }, [isMobileMenuOpen]);
 
+  const handleNavClick = (e: React.MouseEvent, path: string) => {
+    if (path.startsWith("/#")) {
+      const id = path.replace("/#", "");
+      if (location.pathname === "/") {
+        e.preventDefault();
+        setIsMobileMenuOpen(false);
+        const element = document.getElementById(id);
+        if (element) {
+          setTimeout(() => {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }, 300);
+        }
+        return;
+      }
+    }
+    setIsMobileMenuOpen(false);
+  };
+
   const navItems = [
     { name: t('nav.concept'), path: "/#concept" },
     { name: t('nav.services'), path: "/services" },
@@ -37,18 +55,22 @@ export const Navbar: React.FC<{ isLoaded: boolean }> = ({ isLoaded }) => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : -20 }}
         transition={{ duration: 1, delay: 0.5 }}
-        className="fixed top-0 left-0 w-full p-6 md:p-10 z-50 flex justify-between items-center mix-blend-difference"
+        className="fixed top-0 left-0 w-full p-6 md:p-10 z-[110] flex justify-between items-center pointer-events-none"
       >
-        <Link to="/" className="text-2xl tracking-widest font-serif hover:text-sakura hover:-translate-y-1 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(255,183,197,1)] transition-all duration-300 inline-block relative z-50">
+        <Link 
+          to="/" 
+          className="text-2xl tracking-widest font-serif hover:text-sakura hover:-translate-y-1 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(255,183,197,1)] transition-all duration-300 inline-block relative z-50 pointer-events-auto mix-blend-difference"
+        >
           昇華
         </Link>
         
-        <div className="hidden lg:flex items-center gap-12">
-          <div className="flex gap-10 text-xs tracking-[0.3em] uppercase">
+        <div className="hidden lg:flex items-center gap-12 pointer-events-auto">
+          <div className="flex gap-10 text-xs tracking-[0.3em] uppercase mix-blend-difference">
             {navItems.map((item) => (
-              <Link
+                <Link
                 key={item.name}
                 to={item.path}
+                onClick={(e) => handleNavClick(e, item.path)}
                 className="opacity-70 hover:opacity-100 hover:text-sakura hover:-translate-y-1 hover:scale-110 transition-all duration-300 inline-block relative group"
               >
                 {item.name}
@@ -56,14 +78,18 @@ export const Navbar: React.FC<{ isLoaded: boolean }> = ({ isLoaded }) => {
               </Link>
             ))}
           </div>
-          <LanguageSwitcher />
+          <div className="mix-blend-difference">
+            <LanguageSwitcher />
+          </div>
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="flex items-center gap-4 md:gap-6 lg:hidden">
-          <LanguageSwitcher />
+        <div className="flex items-center gap-4 md:gap-6 lg:hidden pointer-events-auto">
+          <div className="mix-blend-difference">
+            <LanguageSwitcher />
+          </div>
           <button 
-            className="relative z-50 p-2 text-white hover:text-sakura transition-colors"
+            className="relative z-[110] p-2 text-white hover:text-sakura transition-colors mix-blend-difference"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -93,15 +119,15 @@ export const Navbar: React.FC<{ isLoaded: boolean }> = ({ isLoaded }) => {
           x: isMobileMenuOpen ? "0%" : "100%"
         }}
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-        className={`fixed inset-0 z-40 bg-navy/95 backdrop-blur-md flex flex-col items-center justify-center lg:hidden ${isMobileMenuOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}
+        className={`fixed inset-0 z-[100] bg-navy/95 backdrop-blur-md flex flex-col items-center justify-center lg:hidden ${isMobileMenuOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}
       >
-        <div className="flex flex-col gap-8 text-lg tracking-widest uppercase text-center">
+        <div className="flex flex-col gap-8 text-lg tracking-widest uppercase text-center w-full px-12">
           {navItems.map((item) => (
             <Link
               key={item.name}
               to={item.path}
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="opacity-70 hover:opacity-100 hover:text-sakura hover:-translate-y-1 hover:scale-110 transition-all duration-300"
+              onClick={(e) => handleNavClick(e, item.path)}
+              className="w-full py-4 text-center opacity-70 hover:opacity-100 hover:text-sakura hover:scale-110 transition-all duration-300 border-b border-white/5 last:border-none"
             >
               {item.name}
             </Link>

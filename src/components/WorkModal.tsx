@@ -88,13 +88,6 @@ export const WorkModal: React.FC<WorkModalProps> = ({ work, onClose }) => {
                     ))}
                   </div>
                 </div>
-
-                <div className="pt-6 border-t border-white/10">
-                  <h4 className="text-white font-serif tracking-wider mb-3 text-lg">Client Voice</h4>
-                  <blockquote className="italic text-gray-400 border-l-2 border-sakura pl-5 py-2">
-                    "{work.testimonial}"
-                  </blockquote>
-                </div>
               </div>
             </div>
           </motion.div>

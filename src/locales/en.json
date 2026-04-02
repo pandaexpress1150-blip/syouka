@@ -16,6 +16,29 @@
     "title": "Where the intangible takes form.",
     "description": "We are a creative agency that transcends boundaries. By blending aesthetics with technology, we breathe new life into digital spaces, elevating your vision into an experience like no other."
   },
+  "summary": {
+    "title": "Taking Business to the Next Level",
+    "subtitle": "Overview",
+    "content": "Syouka Co., Ltd. (SYOUKA) is a creative agency based in Yokohama. We blend traditional aesthetics with cutting-edge technologies like AI, 3D, and Web Development to transform our clients' visions into reality. We go beyond mere production, providing strategic solutions that get to the heart of business and continue to create new value.",
+    "features": [
+      {
+        "title": "Fusion of Art & Tech",
+        "desc": "We amplify refined Japanese aesthetics with the latest AI and 3D technologies, elevating them into experiences that move emotions."
+      },
+      {
+        "title": "Global Standard",
+        "desc": "With multi-language support (JP/EN/CN) and a global perspective, we strongly support your business expansion across borders."
+      },
+      {
+        "title": "Creative Partnership",
+        "desc": "We are not just contractors. We walk together as partners who deeply understand our clients' visions and pave the way for the future."
+      }
+    ],
+    "philosophy": {
+      "title": "Beauty is the ultimate function.",
+      "content": "Our design philosophy is simple: visual beauty breaks down psychological barriers, aids understanding, and builds instant trust. To maximize this intuitive power, we obsess over every pixel and every millisecond of interaction. No matter how technology evolves, we believe that what ultimately reaches the heart is the beauty of carefully crafted details and the genuine emotion they evoke."
+    }
+  },
   "services": {
     "title": "Services",
     "subtitle": "Providing Value",
@@ -29,10 +52,10 @@
       "concept": "Bringing Immersive Wonders to the Browser.",
       "description": "Leveraging Three.js and WebGL to create dynamic visual storytelling that goes beyond static pages, leaving a lasting impression. Highly fusing creativity and engineering with interactive animations synchronized with scrolling and simulator development on the browser."
     },
-    "web3": {
-      "title": "Web3 & Blockchain Solution",
-      "concept": "Empowering the Next Generation of the Internet.",
-      "description": "From smart contract development to dApp architecture, we optimize complex Web3 technologies for your business integration. Building secure and scalable infrastructure, including wallet connection optimization and transparent data management on the blockchain."
+    "ai": {
+      "title": "AI Solution & Intelligence",
+      "concept": "Core Intelligence for Your Business.",
+      "description": "Building next-generation AI experiences using latest LLMs like OpenAI and Claude. From developing chatbots and autonomous agents to automating creative work with generative AI, we dramatically improve business productivity. We elevate cutting-edge technology into intuitive interfaces that anyone can master."
     }
   },
   "process": {
@@ -67,7 +90,7 @@
       "frontend": "Front-end: TypeScript, Next.js, React, Tailwind CSS",
       "creative": "Creative: Three.js, GSAP, Spline, WebGL",
       "backend": "Backend / Infrastructure: Node.js, Vercel, Cloudflare, Supabase, PostgreSQL",
-      "web3": "Web3: Solidity, Polygon, Solana (Anchor), Ethers.js, WalletConnect"
+      "ai": "AI Solution: OpenAI (GPT-4), Claude 3.5, LangChain, Midjourney, Stable Diffusion"
     }
   },
   "company": {
@@ -79,13 +102,13 @@
     },
     "info": {
       "name_label": "Company Name",
-      "name_value": "Shouka Co., Ltd.",
+      "name_value": "Syouka Co., Ltd.",
       "established_label": "Established",
       "established_value": "April 2026",
       "representative_label": "CEO",
       "representative_value": "Eiji Shimomura",
       "business_label": "Business",
-      "business_value": "Web Development, 3D Creative, Web3/Blockchain Solutions, Digital Marketing"
+      "business_value": "Web Development, AI Solutions & Integration, 3D Creative, Digital Marketing"
     }
   },
   "contact": {
@@ -94,16 +117,15 @@
     "lead": "Whether it's bringing an idea to life, checking technical feasibility, or drastically improving an existing site, we're here to help. Let's have a casual talk first.",
     "button": "Contact Us",
     "address_value": "Tenkou Bldg 201, 14-14 Sannotani, Naka-ku, Yokohama, Kanagawa 231-0824, Japan",
-    "phone_value": "090-8813-5055",
-    "email_value": "shouka@info.com"
+    "email_value": "info@syouka.design"
   },
   "works": {
-    "title": "Selected Works",
-    "subtitle": "Works",
+    "title": "Selected Projects",
+    "subtitle": "Showcase",
     "view_all": "View All"
   },
   "footer": {
     "description": "Where beauty and functionality intersect. Elevating your vision into a world-class digital presence.",
-    "rights": "Shouka Design Agency. All rights reserved."
+    "rights": "Syouka Design Agency. All rights reserved."
   }
 }

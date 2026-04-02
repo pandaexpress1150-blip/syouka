@@ -16,6 +16,29 @@
     "title": "形无形，化有形。",
     "description": "我们是一家超越边界的创意机构。通过将美学与技术相结合，我们为数字空间注入新的生命，将您的愿景提升为前所未有的体验。"
   },
+  "summary": {
+    "title": "助力业务迈向新阶段",
+    "subtitle": "Overview",
+    "content": "株式会社昇華（SYOUKA）是一家总部位于横滨的创意机构。我们将传统美学与 AI、3D、Web 开发等尖端技术高度融合，将客户的愿景转化为切实的成果。我们不仅限于制作，更提供切中业务核心的战略解决方案，持续创造新的价值。",
+    "features": [
+      {
+        "title": "美学与技术的共鸣",
+        "desc": "将日本独特的洗练美感，通过最新的 AI 技术和 3D 视觉效果进行放大，升华为触动人心的数字体验。"
+      },
+      {
+        "title": "国际化标准",
+        "desc": "凭借多语言支持（中、日、英）和全球化视野，为跨国业务拓展提供强有力的技术支撑。"
+      },
+      {
+        "title": "共创伙伴关系",
+        "desc": "我们不仅是执行者。我们深切贴合客户的初衷，作为共同开创未来的伙伴并肩前行。"
+      }
+    ],
+    "philosophy": {
+      "title": "美，是极致的功能。",
+      "content": "我们的设计哲学非常简单：视觉上的美感能打破心理隔阂，辅助信息理解，并瞬间建立品牌信任。为了最大限度地发挥这种“直觉的力量”，我们对每一个像素、每一毫秒的交互细节都精益求精。我们坚信，无论技术如何演变，最终触动人心的始终是匠心打磨的细节之美，以及由此产生的真实感动。"
+    }
+  },
   "services": {
     "title": "服务",
     "subtitle": "提供价值",
@@ -29,10 +52,10 @@
       "concept": "为浏览器注入惊喜与沉浸感。",
       "description": "利用 Three.js 和 WebGL 技术，打破静态页面的局限，以动态视觉叙事展现品牌深度，打造令人难忘的数字体验。将创意与工程高度融合，实现与滚动同步的交互动画以及浏览器端模拟器开发。"
     },
-    "web3": {
-      "title": "Web3 & Blockchain Solution",
-      "concept": "掌控下一代互联网机遇。",
-      "description": "从智能合约开发到 dApp 构建，我们将复杂的 Web3 技术转化为优化的商业解决方案，助力企业布局未来。构建安全且可扩展的基础设施，包括钱包连接优化和区块链上的透明数据管理。"
+    "ai": {
+      "title": "AI 解决方案与智能体验",
+      "concept": "将未来的智慧，植入业务核心。",
+      "description": "利用 OpenAI 和 Claude 等最新 LLM 构建下一代 AI 体验。从开发聊天机器人和自主代理，到利用生成式 AI 实现创意自动化，我们显著提升业务生产力。将尖端技术转化为任何人都能掌握的直观界面。"
     }
   },
   "process": {
@@ -67,7 +90,7 @@
       "frontend": "Front-end: TypeScript, Next.js, React, Tailwind CSS",
       "creative": "Creative: Three.js, GSAP, Spline, WebGL",
       "backend": "Backend / Infrastructure: Node.js, Vercel, Cloudflare, Supabase, PostgreSQL",
-      "web3": "Web3: Solidity, Polygon, Solana (Anchor), Ethers.js, WalletConnect"
+      "ai": "AI Solution: OpenAI (GPT-4), Claude 3.5, LangChain, Midjourney, Stable Diffusion"
     }
   },
   "company": {
@@ -85,7 +108,7 @@
       "representative_label": "法人代表",
       "representative_value": "霜村 栄治",
       "business_label": "业务范围",
-      "business_value": "Web 网站及应用规划制作、3D 创意制作、Web3/区块链相关开发、数字营销支援"
+      "business_value": "Web 网站及应用规划制作、AI 解决方案开发与导入、3D 创意制作、数字营销支援"
     }
   },
   "contact": {
@@ -94,16 +117,15 @@
     "lead": "无论是想实现一个创意，还是咨询技术可行性，或者是彻底改进现有网站，我们都在这里为您提供支持。欢迎先进行轻松的交流。",
     "button": "联系我们",
     "address_value": "神奈川县横滨市中区三之谷14-14 Tenkou大厦201",
-    "phone_value": "090-8813-5055",
-    "email_value": "shouka@info.com"
+    "email_value": "info@syouka.design"
   },
   "works": {
-    "title": "案例展示",
-    "subtitle": "Works",
+    "title": "制作案例",
+    "subtitle": "Case Studies",
     "view_all": "查看全部"
   },
   "footer": {
     "description": "美学与功能的交汇处。将您的愿景提升为世界级的数字存在。",
-    "rights": "Shouka Design Agency. All rights reserved."
+    "rights": "Syouka Design Agency. All rights reserved."
   }
 }

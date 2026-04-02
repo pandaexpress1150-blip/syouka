@@ -38,12 +38,13 @@ export const Contact: React.FC = () => {
           <div className="space-y-8 md:space-y-16">
             {[
               { icon: <Mail className="w-7 h-7" />, label: "Email", value: t('contact.email_value'), href: `mailto:${t('contact.email_value')}` },
-              { icon: <Phone className="w-7 h-7" />, label: "Phone", value: t('contact.phone_value'), href: `tel:${t('contact.phone_value').replace(/-/g, '')}` },
-              { icon: <MapPin className="w-7 h-7" />, label: "Address", value: t('contact.address_value'), href: "#" }
+              { icon: <MapPin className="w-7 h-7" />, label: "Address", value: t('contact.address_value'), href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(t('contact.address_value'))}` }
             ].map((item) => (
               <a 
                 key={item.label} 
                 href={item.href}
+                target={item.href.startsWith('http') ? "_blank" : undefined}
+                rel={item.href.startsWith('http') ? "noopener noreferrer" : undefined}
                 className="group flex items-start gap-8 p-8 md:p-12 rounded-[30px] md:rounded-[40px] bg-white/[0.02] border border-white/[0.05] hover:bg-white/[0.04] transition-all duration-500 hover:shadow-[0_15px_40px_-10px_rgba(255,183,197,0.1)]"
               >
                 <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-sakura/10 flex items-center justify-center text-sakura group-hover:scale-110 transition-transform duration-500">
