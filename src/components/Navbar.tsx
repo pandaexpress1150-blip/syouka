@@ -21,29 +21,25 @@ export const Navbar: React.FC<{ isLoaded: boolean }> = ({ isLoaded }) => {
   }, [isMobileMenuOpen]);
 
   const handleNavClick = (e: React.MouseEvent, path: string) => {
-    if (path.startsWith("/#")) {
-      const id = path.replace("/#", "");
-      if (location.pathname === "/") {
+    setIsMobileMenuOpen(false);
+    if (location.pathname === path) {
+      if (path === '/concept' || path === '/works') {
         e.preventDefault();
-        setIsMobileMenuOpen(false);
+        const id = path.replace("/", "");
         const element = document.getElementById(id);
         if (element) {
-          setTimeout(() => {
-            element.scrollIntoView({ behavior: 'smooth' });
-          }, 300);
+          element.scrollIntoView({ behavior: 'smooth' });
         }
-        return;
       }
     }
-    setIsMobileMenuOpen(false);
   };
 
   const navItems = [
-    { name: t('nav.concept'), path: "/#concept" },
+    { name: t('nav.concept'), path: "/concept" },
     { name: t('nav.services'), path: "/services" },
     { name: t('nav.process'), path: "/process" },
     { name: t('nav.tech'), path: "/tech" },
-    { name: t('nav.works'), path: "/#works" },
+    { name: t('nav.works'), path: "/works" },
     { name: t('nav.company'), path: "/company" },
     { name: t('nav.contact'), path: "/contact" },
   ];

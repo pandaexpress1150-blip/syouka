@@ -16,7 +16,17 @@ const ScrollToTop = () => {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    if (!hash) {
+    if (pathname === '/concept') {
+      const element = document.getElementById('concept');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else if (pathname === '/works') {
+      const element = document.getElementById('works');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else if (!hash) {
       window.scrollTo(0, 0);
     } else {
       const timer = setTimeout(() => {
@@ -58,9 +68,11 @@ export default function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/concept" element={<Home />} />
             <Route path="/services" element={<Services />} />
             <Route path="/process" element={<Process />} />
             <Route path="/tech" element={<TechStack />} />
+            <Route path="/works" element={<Home />} />
             <Route path="/company" element={<Company />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

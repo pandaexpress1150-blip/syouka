@@ -188,13 +188,13 @@ export const Home: React.FC = () => {
               {t('works.title')}
             </h2>
           </div>
-          <a
-            href="#works"
+          <Link
+            to="/works"
             className="group flex items-center gap-2 text-xs md:text-sm tracking-[0.3em] uppercase hover:text-sakura transition-all duration-300"
           >
             {t('works.view_all')}{" "}
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </a>
+          </Link>
         </div>
 
         <div className="grid md:grid-cols-2 gap-10 md:gap-16">
