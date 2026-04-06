@@ -56,6 +56,7 @@ export const Contact: React.FC = () => {
           <div className="space-y-8 md:space-y-16">
             {[
               { icon: <Mail className="w-7 h-7" />, label: "Email", value: t('contact.email_value'), href: `mailto:${t('contact.email_value')}` },
+              { icon: <Phone className="w-7 h-7" />, label: "Phone", value: t('contact.phone_value'), href: `tel:${t('contact.phone_value').replace(/-/g, '')}` },
               { icon: <MapPin className="w-7 h-7" />, label: "Address", value: t('contact.address_value'), href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(t('contact.address_value'))}` }
             ].map((item) => (
               <a 

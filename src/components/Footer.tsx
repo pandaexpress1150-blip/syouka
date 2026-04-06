@@ -29,6 +29,11 @@ export const Footer: React.FC = () => {
               </a>
             </p>
             <p className="pt-2">
+              <a href={`tel:${t('contact.phone_value').replace(/-/g, '')}`} className="font-sans hover:text-sakura transition-all duration-300 inline-block">
+                {t('contact.phone_value')}
+              </a>
+            </p>
+            <p className="pt-2">
               <a href={`mailto:${t('contact.email_value')}`} className="font-sans hover:text-sakura transition-all duration-300 inline-block">{t('contact.email_value')}</a>
             </p>
           </address>
